@@ -2,11 +2,11 @@
 
 function insertionSort(list) {
   for(let i = 1; i < list.length; i++){
-    let currentEl = list[i];
-    for(var j = i-1; j >= 0 && list[j] > currentEl; j--){
+    let leadEl = list[i];
+    for(var j = i-1; j >= 0 && list[j] > leadEl; j--){
       list[j+1] = list[j];
     }
-    list[j+1] = currentEl;
+    list[j+1] = leadEl;
   }
   return list;
 }
